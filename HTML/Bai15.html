@@ -7,22 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Contact Us</h1>
-    <p>Use the following form to send a message to Example Cafe</p>
-    <form action="">
+    <fieldset>
+        <legend>Your message:</legend>
         <table>
             <tr>
-                <td><label for="fyouremail">Your email</label></td>
-                <td><input type="text" name="txtyouremail" readonly="readonly" id="youremail" size="20"></td>
+                <td><label for="emailTo">To</label></td>
+                <td><input type="text" name="txtto" readonly="readonly" id="emailTo" size="20" value="Example Cafe"></td>
+            </tr>
+
+            <tr>
+                <td><label for="emailFrom">Your email</label>
+                </td>
+                <td><input type="text" name="txtFrom" id="emailFrom" size="20" tabindex="1" maxlength="250"></td>
             </tr>
 
             <tr>
                 <td><label for="emailBody">Message</label></td>
                 <td><textarea name="txtBody" id="emailBody" cols="50" rows="10" tabindex="2"></textarea></td>
             </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>How you found us:</legend>
+        <table>
             <tr>
-                <td><label for="">How did you here of us?</label></td>
-                <td><select> 
+                <td><label for="option">How did you hear of us </label></td>
+                <td>
+                <select> 
                     <option value="" disabled selected>Google</option>
                     <option value="1">option 1</option>
                     <option value="2">option 2</option>
@@ -30,17 +41,14 @@
                 </select>
                 </td>
             </tr>
-
             <tr>
-                <td><label for="fnewletter"> Newsletter</label></td>
+                <td><label for="newsletter">Newsletter </label></td>
                 <td><input type="checkbox">Ensure this book is checked if you would to receive email updates</td>
             </tr>
             <tr>
-                <td>
-                    <input type="submit" value="Send message">
-                </td>
+                <td><input type="submit" value="Send message"></td>
             </tr>
         </table>
-    </form>
+    </fieldset>
 </body>
 </html>
