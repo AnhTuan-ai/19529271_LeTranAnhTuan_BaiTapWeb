@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        border: 1px solid black ;
+        width: 500px;
+        height: 300px;
+        position: relative;
+    }
+    #banner{
+        position: absolute;
+        top: 10px;
+        background-color: red;
+        transform: rotate(-45deg);
+        padding: 14px 25px 14px 25px;
+    }
+    h1{
+        font-size: 50px;
+    }
+
+</style>
+<body>
+    <div id="container">
+        <h1>Cascading Style Sheets Book</h1>
+        <div id="banner">best seller 2015 </div>
+        <p>Dùng “transform/ -webkit-transform/ -moz-transform/ -ms-transform -o-transform: rotate(-45deg)” cho việc xoay 45 độ.
+        Dùng “box-shadow/ -webkit-box-shadow/ -moz-box-shadow: 0 0 10px #888888;” cho việc tạo bóng (shadow).
+        Dùng “text-shadow:   0 0 3px #000000,    3px 0 3px #000000, 0 3px 3px #000000,  -3px 0 3px #000000,  0 -3px 3px #000000;” để làm chữ mờ.
+        </p>
+    </div>
+</body>
+</html>
