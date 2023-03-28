@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        box-sizing: border-box;
+        background-image: linear-gradient(0,rgb(73, 107, 255),rgb(156, 208, 243));
+        background-repeat: no-repeat;
+        color: white;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px dashed white;
+    }
+    .container{
+        border-bottom: 2px dashed white;
+        overflow: auto;
+    }
+    .nav{
+        padding: 10px;
+    }
+    .nav__item{
+        display: inline;
+        padding: 10px;
+    }
+    .header__1{
+        padding-right: 10px;
+        text-shadow: 5px 2px 5px blue;
+    }
+    .left{
+        padding: 25px;
+        width: 50%;
+        float: left;
+    }
+    .left__h2{
+        padding: 5px;
+        text-shadow: 2px 1px;
+    }
+    .left__p{
+        text-indent: 15px;
+        opacity: 0.7;
+    }
+    .right{
+        padding: 20px;
+        overflow: auto;
+    }
+    .footer{
+        text-align: center;
+        padding: 20px;
+    }
+</style>
+<body>
+    <header class="header">
+        <nav class="nav">
+           <ul>
+                <li class="nav__item">Home</li>
+                <li class="nav__item">Products</li>
+                <li class="nav__item">Services</li>
+                <li class="nav__item">About</li>
+                <li class="nav__item">Contact</li>
+           </ul>
+        </nav>
+        <h1 class="header__1">Blue World</h1>
+    </header>
+    <div class="container">
+        <div class="left">
+            <img src="/Layout/img/anh5.png" alt="hinh 5" width="100%">
+            <h2 class="left__h2">Happiness on Earth.</h2>
+            <p class="left__p">Inspiring destinations within your reach.</p>            
+        </div>
+        <div class="right">
+            <h2 class="right__h2">Your contact information</h2>
+            <p>Start your travel planning right Start your travel planning right Start your travel planning right Start your travel planning right Start your travel planning right Start your travel planning right Start your</p>
+            <form action="" style="padding: 0px 30px;">
+                <table>
+                    <tr>
+                        <td><label for="">title</label></td>
+                        <td><select name="" id="" >
+                            <option value="" disabled selected>Mr.</option>
+                            <option value="AnhTuan">AnhTuan</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Full Name*</label></td>
+                        <td><input type="text" value="" placeholder="First Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Full Name*</label></td>
+                        <td><input type="text" value="" placeholder="First Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Full Name*</label></td>
+                        <td><input type="text" value="" placeholder="First Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Full Name*</label></td>
+                        <td><input type="text" value="" placeholder="First Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Specific questions or requests about your tour</label></td>
+                        <td><textarea name="" id="" cols="21" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit"> <input type="reset"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div> 
+    <footer class="footer">
+        <p>&copy;2016 Blue World Tour. All rights reserved.</p>
+        <p>&copy;2016 Blue World Tour. All rights reserved.</p>
+    </footer>
+</body>
+</html>
