@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 100%;
+    }
+    .header{
+        height: 20%;
+        color: white;
+        overflow: auto;
+        background-color: gray;
+    }
+    .nav{
+        padding: 3px;
+        background-color: rgba(158, 156, 156, 0.822);
+    }
+    .nav__li{
+        display: inline-block;
+        padding: 0px 20px;
+        color: white;
+    }
+    .nav__li:hover{
+        color: black;
+    }
+    .container{
+        background-color: white;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+    .left{
+        width: 70%;
+        float: left;
+        border-right: 1px solid #ccc;
+    }
+    .row__{
+        padding: 20px;
+        display: flex;
+    }
+    .img{
+        border: 1px solid #ccc;
+        padding: 3px;
+    }
+    .tus{
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .right{
+        overflow: auto;
+        padding: 30px;
+    }
+    .footer{
+        background-color: rgba(158, 156, 156, 0.822);
+        padding: 10px;
+    }
+</style>
+<body>
+    <header class="header">
+        <img src="" alt="" width="100px" height="100px" style="float: left ;">
+        <h1 style="padding-top: 15px;"> YOKO'S KITCHEN<h3>JAPANESE COOKING CLASSES</h3></h1>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li class="nav__li">home</li>
+            <li class="nav__li">classes</li>
+            <li class="nav__li">catering</li>
+            <li class="nav__li">about</li>
+            <li class="nav__li">contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="left">
+            <div class="row__">
+                <div class="img"><img src="/Layout/img/anh3.png" alt="hinh 3" style="display: block;">Bok Choi</div>
+                <div class="tus"><h3>Japanese Vegetarian</h3>
+                    <p>Five week course in London</p>
+                    <p>Five week course in London</p>
+                    <p>Five week course in London</p>
+                    <p>Five week course in </p>
+
+                </div>
+            </div>
+            <div class="row__">
+                <div class="img"><img src="/Layout/img/anh4.png" alt="hinh 4" style="display: block;"> Teriyaki Sauce</div>
+                <div class="tus"><h3>Japanese Vegetarian</h3>
+                    <p>Five week course in London</p>
+                    <p>Five week course in London</p>
+                    <p>Five week course in London</p>
+                    <p>Five week course in </p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h3>Popular Recipes</h3>
+            <br>
+            <hr>
+
+        </div>
+    </div>
+    <footer class="footer" style="font-size: small;"><span>c 2011 Yoko's Kitchen</span></footer>
+</body>
+</html>
