@@ -35,7 +35,23 @@
                 return true;
             }
             textMa.blur(ma);
+
             var textHT = $("#txtHT")
+            var tbHT = $("#tbHT")
+            function hanhtrinh(){
+                var re = /^[A-Z]*\-[A-Z]*$/;
+                if(textHT.val() == ""){
+                    tbHT.html("Bắt buộc nhập");
+                    return false;
+                }
+                if(!re.test(textHT.val())){
+                    tbHT.html("Nhap theo mẫu: TPHCM-Cần Thơ ");
+                    return false;
+                }
+                tbHT.html("*");
+                return true;
+            }
+            textHT.blur(hanhtrinh);
             var textNKH = $("#txtNKH")
             var textTG = $("#txtTG")
             var textGT = $("#txtGT")
