@@ -11,6 +11,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
+            var i = 1;
             $("#btndangnhap").click(function(){
                 $("#myModal").modal()
             })
@@ -18,6 +19,27 @@
                 $("#myModal").modal()
             })
             
+            var textMa = $("#txtMa")
+            var tbMa = $("#tbMa")
+            function ma(){
+                var re = /^[A-Z]{3}\-[A-Z]{3}\-\d{2}\-\d{4}$/;
+                if(textMa.val() == ""){
+                    tbMa.html("Bắt buộc nhập");
+                    return false;
+                }
+                if(!re.test(textMa.val())){
+                    tbMa.html("Mã tour theo Mẫu : XXX-XXX-00-0000");
+                    return false;
+                }
+                tbMa.html("*");
+                return true;
+            }
+            textMa.blur(ma);
+            var textHT = $("#txtHT")
+            var textNKH = $("#txtNKH")
+            var textTG = $("#txtTG")
+            var textGT = $("#txtGT")
+
         })
     </script>
 </head>
@@ -57,31 +79,31 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <td>1</td>
+                    <td>HCG-TienGiang-14-2023</td>
+                    <td>Vung Tau</td>
+                    <td>12/6/2023</td>
+                    <td>4 ngày</td>
+                    <td>500$</td>
+                    <td><img src="../img/aside.jpg" alt=""></td>
                 </tr>
                 <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <td>2</td>
+                    <td>HNI-HCM-12-2023</td>
+                    <td>HCM city - Can Tho city</td>
+                    <td>12/5/2023</td>
+                    <td>2 ngày</td>
+                    <td>100$</td>
+                    <td><img src="../img/aside.jpg" alt="hinh"></td>
                 </tr>
                 <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 </tbody>
             </table>
@@ -95,13 +117,60 @@
                     <!-- Modal Header -->
                     <div class="modal-header justify-content-md-center">
                             <h4 class="text-center">
-                                FORM TOUR
+                                THÔNG TIN TOUR
                             </h4>
                     </div>
               
                     <!-- Modal body -->
-                    <div class="modal-body">
-                      
+                    <div class="modal-body justify-content-center" >
+                        <form action="">
+                            <table>
+                                <tr>
+                                    <td><label for="">Mã Tour</label></td>
+                                    <td><input class="form-control" id="txtMa" type="text" placeholder="HNI-HCM-12-2020"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><span id="tbMa" class="text-danger">*</span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="">Hành trình</label></td>
+                                    <td><input class="form-control" id="txtHT" type="text" placeholder="nhập hành trình"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><span id="tbHT" class="text-danger">*</span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="">Ngày khởi hành</label></td>
+                                    <td><input class="form-control" id="txtNKH" type="date"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><span id="tbNKH" class="text-danger">*</span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="">Thời gian</label></td>
+                                    <td><input class="form-control" id="txtTG" type="text" placeholder="nhập thời gian đi (4 ngày 3 đêm)"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><span id="tbTG" class="text-danger">*</span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="">Giá tour</label></td>
+                                    <td><input class="form-control" id="txtGT" type="text" placeholder="Số > 0"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><span id="tbGT" class="text-danger">*</span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="">Ảnh đại diện</label></td>
+                                    <td><input class="form-control" id="txtADD" type="file"></td>
+                                </tr>
+                            </table>
+                        </form>
                     </div>
               
                     <!-- Modal footer -->
