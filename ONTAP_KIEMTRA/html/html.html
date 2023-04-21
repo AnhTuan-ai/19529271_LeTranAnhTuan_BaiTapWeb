@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/jquery-3.6.4.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-
+    <script>
+        $(document).ready(function(){
+            $("#btndangnhap").click(function(){
+                $("#myModal").modal()
+            })
+            $("#btnmotour").click(function(){
+                $("#myModal").modal()
+            })
+            
+        })
+    </script>
 </head>
 <body>
     <div class="container ">
@@ -22,10 +32,10 @@
             <div class="col-md-12">
                 <ul class="nav">
                     <li class="nav-item">
-                      <a class="nav-link alert-dark" href="#">Dang Nhap</a>
+                      <a class="nav-link alert-dark" id="btndangnhap" href="#">Dang Nhap</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link alert-dark" href="#">Mo Tour</a>
+                      <a class="nav-link alert-dark" id="btnmotour" href="#">Mo Tour</a>
                     </li>
                   </ul>
             </div>
@@ -76,6 +86,32 @@
                 </tbody>
             </table>
             </div>
+        </div>
+        <div class="row">
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+              
+                    <!-- Modal Header -->
+                    <div class="modal-header justify-content-md-center">
+                            <h4 class="text-center">
+                                FORM TOUR
+                            </h4>
+                    </div>
+              
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      
+                    </div>
+              
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
     
