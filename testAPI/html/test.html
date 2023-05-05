@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav ">
+                    <li class="nav-item alert-danger"><a href="#" class="nav-link" id="form">form</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Hello</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Hello</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Hello</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>name</th>
+                            <th>password</th>
+                            <th>IMG</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbData">
+                        <!-- <tr>
+                            <td>nam</td>
+                            <td>1231</td>
+                            <td><button class="btn-info">Edit</button></td>
+                            <td><button class="btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>nam</td>
+                            <td>1231</td>
+                            <td><button class="btn-info">Edit</button></td>
+                            <td><button class="btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>nam</td>
+                            <td>1231</td>
+                            <td><button class="btn-info">Edit</button></td>
+                            <td><button class="btn-danger">Delete</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="modal" id="my-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">CHAO</div>
+                        <div class="modal-body">
+                            <table>
+                                    <tr>
+                                        <td><label for="">name:</label></td>
+                                        <td><input type="text" placeholder="tuan" id="name"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><span id="tbname" class="text-danger">*</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="">password:</label></td>
+                                        <td><input type="text" placeholder="1243" id="password"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><span id="tbpassword" class="text-danger">*</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="">IMG:</label></td>
+                                        <td><input type="text"  id="img"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><span id="tbpassword" class="text-danger">*</span></td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn-info" onclick="addUser()">submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script >
+    $(document).ready(function(){
+        var i =1;
+        $("#form").click(function(){
+            $("#my-modal").modal()
+        })
+        //
+        var textMa = $("#txtMa")
+            var tbMa = $("#tbMa")
+            function ma(){
+                var re = /^[A-Z]{1,3}\-[A-Z]{3}\-\d{2}\-\d{4}$/;
+                if(textMa.val() == ""){
+                    tbMa.html("Bắt buộc nhập");
+                    return false;
+                }
+                if(!re.test(textMa.val())){
+                    tbMa.html("Mã tour theo Mẫu : XXX-XXX-00-0000");
+                    return false;
+                }
+                tbMa.html("*");
+                return true;
+            }
+            textMa.blur(ma);
+    })
+</script>
+<script src="../js/testAPI.js"></script>
+</html>
