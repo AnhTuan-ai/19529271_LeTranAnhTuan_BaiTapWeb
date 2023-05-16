@@ -22,7 +22,7 @@
             var textMa = $("#txtMa")
             var tbMa = $("#tbMa")
             function ma(){
-                var re = /^[A-Z]{1,3}\a[A-Z]{3}\-\d{2}\-\d{4}$/;
+                var re = /^[A-Z]{1,3}\-[A-Z]{3}\-\d{2}\-\d{4}$/;
                 if(textMa.val() == ""){
                     tbMa.html("Bắt buộc nhập");
                     return false;
@@ -55,7 +55,25 @@
             var textNKH = $("#txtNKH")
             var textTG = $("#txtTG")
             var textGT = $("#txtGT")
-
+            var tbGT = $("#tbGT")
+            function giatour(){
+                var re = /^\W$/;
+                if(textGT.val() == ""){
+                    tbGT.html("Bắt buộc nhập");
+                    return false;
+                }
+                if(!re.test(textGT.val())){
+                    tbGT.html("Nhập số");
+                    return false;
+                }
+                if(textGT.val() <= 0){
+                    tbGT.html("Nhập số lớn 0");
+                    return false;
+                }
+                tbGT.html("*");
+                return true;
+            }
+            textGT.blur(giatour);
         })
     </script>
 </head>

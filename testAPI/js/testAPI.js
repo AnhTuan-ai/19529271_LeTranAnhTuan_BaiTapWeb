@@ -3,6 +3,8 @@ function addUser() {
   var payload = {};
   payload['name'] = document.getElementById("name").value;
   payload['password'] = document.getElementById("password").value;
+  payload['img'] = document.getElementById("img").value;
+
 
   fetch('https://64535c59e9ac46cedf2333fd.mockapi.io/api/users', {
     method: 'POST',
@@ -18,7 +20,6 @@ function addUser() {
     document.getElementById("name").value = "";
     document.getElementById("password").value = "";
     document.getElementById("img").value = "";
-
     getData();
   }).catch(error => {
     // handle error
@@ -26,8 +27,22 @@ function addUser() {
 
 }
 //edit data
-function editData(){
-
+function editData(id){
+  $("#my-modal").modal();
+  fetch(`https://64535c59e9ac46cedf2333fd.mockapi.io/api/users/${id}`, {
+  method: 'PUT', // or PATCH
+  headers: {'content-type':'application/json'},
+  body: JSON.stringify({completed: true})
+}).then(res => {
+  if (res.ok) {
+      return res.json();
+  }
+  // handle error
+}).then(task => {
+    
+}).catch(error => {
+  // handle error
+})
 }
 //delete data
 function deleteData(id){
@@ -58,10 +73,11 @@ function getData() {
   var tmpData = "";
   tasks.forEach(user => {
     tmpData+="<tr>"
-    tmpData+="<td>"+user.name+"</td>"
-    tmpData+="<td>"+user.password+"</td>"
-    tmpData+="<td><img src="+user.avatar+"></td>"
-    tmpData+="<td><button class='btn-info'>Edit</button></td>"
+    tmpData+="<td>"+user.ten+"</td>"
+    tmpData+="<td>"+user.thuonghieu+"</td>"
+    tmpData+="<td>"+user.loai+"</td>"
+    tmpData+="<td>"+user.loaichitiet+"</td>"
+    tmpData+="<td><button class='btn-info'onclick='editData(`"+user.id+"`)'>Edit</button></td>"
     tmpData+="<td><button class='btn-danger' onclick='deleteData(`"+user.id+"`)'>Delete</button></td>"
     tmpData+="</tr>"
   });
